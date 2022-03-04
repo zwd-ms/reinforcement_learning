@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           ${{ matrix.config.base_path }}bin/pip wheel . -w wheel_output/ --verbose
-          auditwheel --verbose repair wheel_output/*whl -w audit_output/ --plat manylinux_2_27_x86_64
+          auditwheel --verbose repair wheel_output/*whl -w audit_output/ --plat manylinux2014_x86_64
       - name: Upload built wheel
         uses: actions/upload-artifact@v1
         with:
