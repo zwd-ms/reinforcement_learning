@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - 'releases/**'
+      - wheel_ci
   pull_request:
     branches:
       - '*'
