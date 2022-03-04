@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: wheel_${{ matrix.config.version }}
-          path: audit_output/
+          path: wheel_output/
   test:
     needs: build
     container:
