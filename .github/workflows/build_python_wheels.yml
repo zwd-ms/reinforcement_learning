@@ -13,12 +13,12 @@ on:
 jobs:
   build:
     container:
-      image: vowpalwabbit/ubuntu2004-build:latest
+      image: vowpalwabbit/rl-ubuntu-1804:latest
     runs-on: ubuntu-latest
     strategy:
       matrix:
         config:
-        - { version: 3.8, base_path: /opt/python/cp38-cp38/ }
+        - { version: 3.8, base_path: /usr/ }
     steps:
       # v1 must be used because newer versions require a node.js version that will not run on this old image.
       - uses: actions/checkout@v1
